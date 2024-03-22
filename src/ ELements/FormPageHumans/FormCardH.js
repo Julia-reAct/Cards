@@ -1,8 +1,8 @@
 import React from "react"
 import { useForm } from "react-hook-form"
-import './FormCard.css'
+import './FormCardH.css'
 
-export default function FormCard() {
+export default function FormCardH() {
     const { register, handleSubmit } = useForm()
     const onSubmit = (data) => console.log(data)
 
@@ -32,6 +32,10 @@ export default function FormCard() {
             <div>
                 <label>Number</label>
                 <input type="numberPhone" {...register("numberPhone", { min: 18, max: 99 })} />
+            </div>
+            <div>
+                <label>Website</label>
+                <input {...register("website", {maxLength: 80 })} />
             </div>
             <div>
                 <label>Social Media</label>
